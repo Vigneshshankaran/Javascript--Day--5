@@ -1,0 +1,79 @@
+//a.Print odd numbers in an array
+
+//Arrow Function:
+
+let odd = ()=> {
+  let n = [1, 2, 3, 4, 5]
+let odd = n.filter(number => number % 2 == 1)
+console.log(odd)
+}
+odd()
+
+//OUTPUT: (3) [1, 3, 5]
+
+//b.Convert all the strings to title caps in a string array
+
+//ArrowFunction
+
+
+let titleCase =  ()=> {
+  let arr = "hello there how are you"
+  let titlecase = arr.toLowerCase().replace(/\b(\w)/g, s => s.toUpperCase());
+  console.log(titlecase)
+}
+titleCase()
+
+//OUTPUT: Hello There How Are You
+
+
+//c.Sum of all numbers in an array using arrow function
+
+//Arrow Function:
+
+let sumFunc = () => {
+  
+  
+  let arr = [1, 2, 3, 4, 5]
+  let sum = arr.reduce(function(a, b){
+    return a + b;
+  });
+  console.log(sum);
+}
+sumFunc()
+
+//OUTPUT: 15
+
+//d.Return all the prime numbers in an array
+
+//ArrowFunction :
+
+let prime = (arr)=> {
+  return arr.filter(function(n){
+    for (let i = 2; i < n; i++) {
+      if (n % i === 0) return false;
+    }
+    return n > 1;
+  });
+};
+console.log(prime([7, 16, 9, 3]));
+
+//OUTPUT: (2) [7, 3]
+
+
+//e.Return all the palindromes in an array
+
+//ArrowFunction
+
+
+let isPalindrome =  ()=> {
+  var myArray = ['viicc', 'racecar', 'honda', 'malayalam'];
+  var arr = myArray.filter(function (c, d) {
+    var palindrome = c.split('').reverse().join('');
+    if (c == palindrome) {
+      console.log(myArray[d]);
+    }
+  });
+}
+isPalindrome()
+
+//OUTPUT: racecar malayalam
